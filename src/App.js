@@ -1,10 +1,10 @@
 import "./App.css";
-import Body from "./final/components/Body";
+import PersonalNote from "./final/PersonalNote";
 
 export default function App() {
   return (
     <div className="App">
-      <Body />
+      <PersonalNote />
     </div>
   );
 }
