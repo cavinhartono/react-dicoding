@@ -1,5 +1,7 @@
 import React from "react";
+import Navbar from "./components/Navbar";
 import Body from "./components/Body";
+import Form from "./components/Form";
 import { getInitialData } from "../utills/todolist";
 
 class PersonalNote extends React.Component {
@@ -68,6 +70,7 @@ class PersonalNote extends React.Component {
 
     return (
       <>
+        <Navbar onSearch={this.onSearchHandler} />
         <Body
           onDelete={this.onDeleteHandler}
           activeDatas={activeDatas}
@@ -75,6 +78,7 @@ class PersonalNote extends React.Component {
           onActive={this.onActiveHandler}
           onArchive={this.onArchiveHandler}
         />
+        <Form addDatas={this.onAddDatasHandler} />
       </>
     );
   }
