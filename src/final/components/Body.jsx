@@ -13,7 +13,7 @@ export default function Body({
     <>
       <section className="container">
         <div className="bg-blue-50 px-5 sm:px-24 py-10 md:py-20">
-          <h2>Catatan</h2>
+          <h2 className="text-2xl font-bold mb-8">Catatan</h2>
           {activeDatas.length !== 0 ? (
             <ActiveNote
               onDelete={onDelete}
@@ -21,7 +21,7 @@ export default function Body({
               onActive={onActive}
             />
           ) : (
-            <p className="text-gray-500">Tidak ada catatan</p>
+            <p className="text-black">Tidak ada catatan</p>
           )}
         </div>
       </section>
@@ -35,7 +35,7 @@ export default function Body({
               onArchive={onArchive}
             />
           ) : (
-            <p className="text-gray-500">Tidak ada catatan</p>
+            <p className="text-black">Tidak ada catatan</p>
           )}
         </div>
       </section>

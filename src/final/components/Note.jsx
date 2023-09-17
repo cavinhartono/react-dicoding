@@ -12,12 +12,14 @@ export default function Note({
 }) {
   return (
     <div className="mx-auto p-6 w-full bg-white rounded-lg border border-gray-200 shadow-md">
-      <div className="text-gray-400 pb-2">
-        <h5 className="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+      <div className="pb-2">
+        <h5 className="mb-2 text-xl font-semibold tracking-tight text-black">
           {title}
         </h5>
-        <span className="text-sm">{showFormattedDate(createdAt)}</span>
-        <p className="my-3 font-normal text-gray-700 h-max">{body}</p>
+        <span className="text-sm text-black opacity-75">
+          {showFormattedDate(createdAt)}
+        </span>
+        <p className="my-3 font-normal text-black h-max">{body}</p>
       </div>
       <div className="flex w-full gap-2">
         <button
