@@ -71,6 +71,7 @@ class PersonalNote extends React.Component {
     return (
       <>
         <Navbar onSearch={this.onSearchHandler} />
+        <Form addDatas={this.onAddDatasHandler} />
         <Body
           onDelete={this.onDeleteHandler}
           activeDatas={activeDatas}
@@ -78,7 +79,6 @@ class PersonalNote extends React.Component {
           onActive={this.onActiveHandler}
           onArchive={this.onArchiveHandler}
         />
-        <Form addDatas={this.onAddDatasHandler} />
       </>
     );
   }
