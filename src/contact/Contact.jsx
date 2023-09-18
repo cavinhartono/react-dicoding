@@ -1,5 +1,6 @@
 import React from "react";
 import List from "./components/List";
+import Form from "./components/Form";
 import { getData } from "../utills/contact";
 
 export default class Contact extends React.Component {
@@ -11,6 +12,23 @@ export default class Contact extends React.Component {
     };
 
     this.onDeleteHandle = this.onDeleteHandle.bind(this);
+    this.onAddHandle = this.onAddHandle.bind(this);
+  }
+
+  onAddHandle({ name, tag }) {
+    this.setState((prev) => {
+      return {
+        contacts: [
+          ...prev.contacts,
+          {
+            id: +new Date(),
+            name,
+            tag,
+            imageUrl: "/images/default.jpg",
+          },
+        ],
+      };
+    });
   }
 
   onDeleteHandle(id) {
@@ -23,6 +41,7 @@ export default class Contact extends React.Component {
     return (
       <div className="container">
         <h1 className="text-2xl text-black">Daftar Kontak</h1>
+        <Form add={this.onAddHandle} />
         <List contacts={this.state.contacts} onDelete={this.onDeleteHandle} />
       </div>
     );

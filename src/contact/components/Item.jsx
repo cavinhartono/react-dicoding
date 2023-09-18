@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "./Image";
 import Body from "./Body";
-import Delete from "./Delete";
+import Button from "./Button";
 
 export default function Item({ id, imageUrl, name, tag, onDelete }) {
   return (
-    <div className="w-full px-4 py-6">
+    <div className="w-full flex justify-between items-center gap-8 px-4 py-6">
       <Image imageUrl={imageUrl} />
       <Body name={name} tag={tag} />
-      <Delete id={id} onDelete={onDelete} />
+      <Button label="Hapus" id={id} action={onDelete} />
     </div>
   );
 }
