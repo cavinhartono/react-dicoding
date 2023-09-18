@@ -1,16 +1,11 @@
 import React from "react";
 
-export default function Button({ label, id, action }) {
-  const colors = {
-    hapus: "px-4 py-2 bg-red-600 text-white",
-    tambah: "px-4 py-2 bg-green-600 text-white",
-    edit: "px-4 py-2 bg-yellow-600 text-white",
-  };
-
-  const color = colors[label.toLowerCase()];
-
+export default function Button({ label, id, action, color }) {
   return (
-    <button className={color} onClick={() => action(id)}>
+    <button
+      className={`px-4 py-2 text-white ${color}`}
+      onClick={() => action(id)}
+    >
       {label}
     </button>
   );
